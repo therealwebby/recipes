@@ -1,0 +1,13 @@
+:root {
+  --color-pink: pink;
+  --color-blue: lightblue;
+}
+
+body {
+  background: var(--color-blue);
+}
+
+.main {
+  color: var(--color-pink);
+  background-color: white;
+}
