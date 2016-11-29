@@ -28,7 +28,7 @@ node_modules
 *.zip
 
 # Logs and databases #
-*.log
+*.log*
 *.sql
 *.sqlite
 

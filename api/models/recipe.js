@@ -12,7 +12,9 @@ const Schema = mongoose.Schema;
 const recipeSchema = new Schema({
   title: { type: String, default: '' },
   ingredients: { type: Array, default: [] },
-  body: { type: Array, default: [] },
+  description: { type: String, default: '' },
+  steps: { type: Array, default: [] },
+  body: { type: String, default: '' },
   created: { type: Date, default: Date.now }
 });
 
