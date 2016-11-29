@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { fetchRecipes } from '../../actions/list-actions';
 import store from '../../store';
-import styles from './main.css';
+import styles from './app-container.css';
 
-export default class Main extends Component {
+export default class AppContainer extends Component {
   constructor() {
     super();
     store.dispatch(fetchRecipes());

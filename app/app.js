@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Main from './components/main/main';
+import AppContainer from './components/app-container/app-container';
 
-render(<Main />, document.getElementById('app'));
+import { Router, Route } from 'react-router';
+
+render(<AppContainer />, document.getElementById('app'));

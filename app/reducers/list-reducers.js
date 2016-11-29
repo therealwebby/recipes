@@ -15,7 +15,7 @@ function recipes(
     case RECEIVE_POSTS:
       return Object.assign({}, state, {
         isFetching: false,
-        recipes: action.posts,
+        recipes: action.recipes.slice(0),
         lastUpdated: action.receivedAt
       });
     default:

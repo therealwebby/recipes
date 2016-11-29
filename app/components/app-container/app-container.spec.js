@@ -2,12 +2,12 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import {expect} from 'chai';
 
-import Main from './main.js'
+import AppContainer from './app-container.js'
 
 describe('Components', () => {
-  describe('<Main />', () => {
+  describe('<AppContainer />', () => {
     it('renders the title', () => {
-      const wrapper = mount(<Main />);
+      const wrapper = mount(<AppContainer />);
       expect(wrapper.find('h1').length).to.equal(1);
     });
   });
