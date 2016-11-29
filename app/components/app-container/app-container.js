@@ -1,21 +1,41 @@
 import React, { Component } from 'react';
-import { fetchRecipes } from '../../actions/recipe-actions';
-import store from '../../store';
 import styles from './app-container.css';
 
-export default class AppContainer extends Component {
-  constructor() {
-    super();
-    store.dispatch(fetchRecipes());
-  }
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actions from '../../actions/recipe-actions';
 
+class AppContainer extends Component {
+  constructor(props) {
+    super(props);
+    console.log(props);
+  }
+  
+  componentDidMount() {
+    this.props.fetchRecipes();
+  }
+  
   render() {
     return (
-        <div className="main">
-          <h1>
-            A test
-          </h1>
-        </div>
+      <div>
+        {this.props.isFetching && <p>loading</p>}
+      </div>
     )
   }
-};
+}
+
+function mapDispachToProps(dispatch) {
+  return bindActionCreators(actions, dispatch);
+}
+
+function mapStateToProps(state) {
+  const { reicpes } = state;
+  const { isFetching } = reicpes;
+  
+  return {
+    reicpes,
+    isFetching
+  }
+}
+
+export default connect(mapStateToProps, mapDispachToProps)(AppContainer)
