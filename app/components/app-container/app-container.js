@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchRecipes } from '../../actions/list-actions';
+import { fetchRecipes } from '../../actions/recipe-actions';
 import store from '../../store';
 import styles from './app-container.css';
 

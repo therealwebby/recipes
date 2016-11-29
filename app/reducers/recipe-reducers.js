@@ -1,21 +1,21 @@
 import { combineReducers } from 'redux';
-import { REQUEST_POSTS, RECEIVE_POSTS } from '../actions/list-actions';
+import { REQUEST_RECIPES, RECEIVE_RECIPES } from '../actions/recipe-actions';
 
-function recipes(
-  state = {
-    isFetching: false,
-    items: []
-  }, action
-) {
+const initialState = {
+  isFetching: false,
+  entries: []
+};
+
+function recipes(state = initialState, action) {
   switch (action.type) {
-    case REQUEST_POSTS:
+    case REQUEST_RECIPES:
       return Object.assign({}, state, {
         isFetching: true
       });
-    case RECEIVE_POSTS:
+    case RECEIVE_RECIPES:
       return Object.assign({}, state, {
         isFetching: false,
-        recipes: action.recipes.slice(0),
+        entries: action.entries.slice(0),
         lastUpdated: action.receivedAt
       });
     default:
