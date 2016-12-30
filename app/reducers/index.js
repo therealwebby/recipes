@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 // import { routerReducer } from 'react-router-redux';
 
-import reicpes from './recipe-reducers'
+import recipes from './recipe-reducers'
 
-const rootReducer = combineReducers({ reicpes });
+const rootReducer = combineReducers({ recipes });
 
 export default rootReducer;

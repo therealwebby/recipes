@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import { REQUEST_RECIPES, RECEIVE_RECIPES } from '../actions/recipe-actions';
 
 const initialState = {

@@ -18,6 +18,7 @@ class AppContainer extends Component {
   render() {
     return (
       <div>
+        <h1>{this.props.recipes.entries[0].title}</h1>
         {this.props.isFetching && <p>loading</p>}
       </div>
     )
@@ -29,11 +30,11 @@ function mapDispachToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  const { reicpes } = state;
-  const { isFetching } = reicpes;
+  const { recipes } = state;
+  const { isFetching } = recipes;
   
   return {
-    reicpes,
+    recipes,
     isFetching
   }
 }

@@ -13,7 +13,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /(?!spec)(\.js$)/,
         loaders: ['babel'],
         include: path.join(__dirname, 'app')
       },
@@ -28,7 +28,7 @@ module.exports = {
     ]
   },
   postcss: function () {
-    console.log(__dirname + '/dist')
+    console.log(__dirname + '/dist');;;;;;;;;;;;;;;;;;;;;
     return [cssNext];
   }
 };
