@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const cssNext = require('postcss-cssnext');
+const cssImport = require("postcss-import");
 
 module.exports = {
   devtool: 'source-map',
@@ -35,7 +36,7 @@ module.exports = {
     ]
   },
   postcss: function () {
-    return [cssNext];
+    return [cssImport, cssNext];
   },
   externals: {
     'cheerio': 'window',

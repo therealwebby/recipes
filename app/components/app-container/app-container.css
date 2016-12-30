@@ -1,13 +1,5 @@
-:root {
-  --color-pink: pink;
-  --color-blue: lightblue;
-}
+@import '../../shared/style-guide/colors.css';
 
 body {
-  background: var(--color-blue);
-}
-
-.main {
-  color: var(--color-pink);
-  background-color: white;
+  background: var(--color-gallery);
 }
