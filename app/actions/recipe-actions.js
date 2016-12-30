@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch'
+import fetch from 'isomorphic-fetch';
 
 export const REQUEST_RECIPES = 'REQUEST_RECIPES';
 function requestRecipes() {
@@ -19,12 +19,11 @@ function receiveRecipes(json) {
 export function fetchRecipes() {
   return function (dispatch) {
     dispatch(requestRecipes());
-
-    return fetch('http://localhost:3000/api/recipes')
-    .then(response => response.json())
-    .then(json => {
-      dispatch(receiveRecipes(json));
-    });
+  
+    return fetch('http://localhost:3000/api/recipes').then(response => response.json())
+      .then(json => {
+        dispatch(receiveRecipes(json));
+      });
   }
 }
 
