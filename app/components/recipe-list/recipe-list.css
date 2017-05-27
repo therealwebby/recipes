@@ -1,0 +1,12 @@
+@import '../../shared/style-guide/colors.css';
+
+.recipe-list {
+  margin: 0 auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 1024px;
+  background-color: var(--color-white);
+  list-style: none;
+  border-radius: 2px;
+  border: 1px solid #ececec;
+}

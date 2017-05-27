@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import RecipeListItem from '../recipe-list-item/recipe-list-item';
+import './recipe-list.css'
 
 class RecipeList extends Component {
   render() {

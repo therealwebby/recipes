@@ -1,0 +1,7 @@
+@import '../../shared/style-guide/colors.css';
+
+.recipe-list-item {
+  &__title {
+    color:pink;
+  }
+}

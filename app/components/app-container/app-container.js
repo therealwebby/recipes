@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RecipeListContainer from '../recipe-list-container/recipe-list-container';
-import Styles from './app-container.css';
+import './app-container.css';
 
 class AppContainer extends Component {
   constructor(props) {
