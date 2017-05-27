@@ -1,27 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import RecipeListItem from '../recipe-list-item/recipe-list-item';
 
 class RecipeList extends Component {
-  constructor(props) {
-    super(props);
-  }
-  
   render() {
-    return <ul className="recipe-list">{this.props.recipes.entries.map(this.renderRecipe)}</ul>
-  }
-  
-  renderRecipe(recipe) {
     return (
-      <li key={recipe._id}>
-        <div className="recipe-list__title">
-          {recipe.title}
-        </div>
-        <div className="recipe-list__created-on">
-          {recipe.created}
-        </div>
-        <div className="recipe-list__description">
-          {recipe.description}
-        </div>
-      </li>);
+      <ul className="recipe-list">
+        {this.props.recipes.entries.map(
+          (recipe, index) => <RecipeListItem key={`recipe-${index}`}
+                                             recipe={recipe}/>
+        )}
+      </ul>
+    );
   }
 }
 
